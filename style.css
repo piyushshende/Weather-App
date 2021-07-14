@@ -54,7 +54,7 @@ img {
     color: white;
 }
 
-@media(max-width:700px) {
+@media(max-width:400px) {
     .location .country {
         font-size: 5vw;
     }
