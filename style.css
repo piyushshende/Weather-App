@@ -12,54 +12,96 @@ body {
     align-items: center;
     background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
     font-family: sans-serif;
-    /* color: linear-gradient(rgb(235, 240, 192), rgb(255, 255, 0)); */
     color: white;
 }
 
-.location {
+.desktop {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    font-family: sans-serif;
+    color: white;
+}
+
+.desktop .location {
     display: flex;
 }
 
-.icon {
+.desktop .icon {
     margin-left: 300px;
 }
 
-.temperature {
+.desktop .temperature {
     margin-top: 200px;
     display: flex;
 }
 
-.degree {
+.desktop .degree {
     margin-left: 10px;
     font-size: 3vw;
 }
 
-.temperature h1 {
+.desktop .temperature h1 {
     font-size: 5vw;
 }
 
-.country {
+.desktop .country {
     font-size: 2vw;
     margin-top: 20px;
 }
 
-p {
+.desktop p {
     font-size: 20px;
     margin-top: 10px;
 }
 
-img {
+.desktop img {
     height: 10vh;
     width: 5vw;
     color: white;
 }
 
+.mobile {
+    display: none;
+}
+
 @media(max-width:400px) {
-    .location .country {
-        font-size: 5vw;
+    .mobile {
+        display: block;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+        font-family: sans-serif;
+        color: white;
     }
-    img {
-        height: 10vh;
-        width: 10vw;
+    .desktop {
+        display: none;
+    }
+    .mobile .location {
+        font-size: 5vw;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile .icon {
+        margin-top: 30px;
+    }
+    .mobile .temperature {
+        display: flex;
+        font-size: 5vw;
+        margin-top: -50px;
+        margin-bottom: 10px;
+    }
+    .mobile .degree {
+        margin-left: 1px;
+        font-size: 9.5vw;
     }
 }
